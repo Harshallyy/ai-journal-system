@@ -1,31 +1,49 @@
 # AI-Assisted Journal System
 
-This project is a simple full-stack prototype that allows users to write
-journal entries, analyze emotions using an AI model, and view insights
-based on their entries.
+A simple full-stack application where users can write journal entries
+and analyze their emotions using an AI model.
 
-The goal of this project is to demonstrate API design, LLM integration,
-and basic frontend interaction.
+This project was built as part of a technical assignment to demonstrate:
+
+-   Backend API design
+-   LLM integration
+-   Database usage
+-   Basic frontend interaction
+-   System architecture thinking
 
 ------------------------------------------------------------------------
 
-## Tech Stack
+# Live Demo
 
-Backend - Node.js - Express - MongoDB - Mongoose
+Frontend: https://profound-meerkat-f3d24f.netlify.app/
+
+Backend API: https://ai-journal-system-ofg5.onrender.com
+
+GitHub Repository: https://github.com/Harshallyy/ai-journal-system
+
+------------------------------------------------------------------------
+
+# Tech Stack
 
 Frontend - React
 
+Backend - Node.js - Express
+
+Database - MongoDB Atlas
+
 AI Integration - LLM API for emotion analysis
+
+Deployment - Backend → Render - Frontend → Netlify
 
 ------------------------------------------------------------------------
 
-## Features
+# Features
 
-### 1. Create Journal Entry
+### Create Journal Entry
 
-Users can create a journal entry with: - userId - ambience - text
+Users can store a journal entry.
 
-API: POST /api/journal
+POST /api/journal
 
 Example request:
 
@@ -34,21 +52,23 @@ after listening to rain." }
 
 ------------------------------------------------------------------------
 
-### 2. Get User Entries
+### Get User Entries
 
-Returns all journal entries for a specific user.
+Returns all journal entries for a user.
 
-API: GET /api/journal/:userId
+GET /api/journal/:userId
 
-Example: /api/journal/123
+Example:
+
+/api/journal/123
 
 ------------------------------------------------------------------------
 
-### 3. Emotion Analysis
+### Emotion Analysis
 
 Analyzes journal text using an AI model.
 
-API: POST /api/journal/analyze
+POST /api/journal/analyze
 
 Example request:
 
@@ -61,11 +81,11 @@ Example response:
 
 ------------------------------------------------------------------------
 
-### 4. Insights API
+### Insights API
 
 Provides insights based on user entries.
 
-API: GET /api/journal/insights/:userId
+GET /api/journal/insights/:userId
 
 Example response:
 
@@ -73,42 +93,48 @@ Example response:
 
 ------------------------------------------------------------------------
 
-## Project Structure
+# Project Structure
 
-backend ├ config ├ controllers ├ models ├ routes ├ utils └ server.js
+ai-journal-system
 
-frontend └ React application
+backend config controllers models routes utils server.js
+
+frontend React application
+
+README.md ARCHITECTURE.md
 
 ------------------------------------------------------------------------
 
-## Setup Instructions
+# Setup Instructions
 
-### Backend Setup
+## Backend
 
 cd backend npm install
 
-Create .env file:
+Create .env file
 
 MONGO_URI=your_mongodb_connection_string OPENROUTER_KEY=your_api_key
 PORT=5000
 
-Run backend:
+Run backend
 
 node server.js
 
 ------------------------------------------------------------------------
 
-### Frontend Setup
+## Frontend
 
 cd frontend npm install npm start
 
-Frontend runs on: http://localhost:3000
+Frontend runs on:
+
+http://localhost:3000
 
 ------------------------------------------------------------------------
 
-## Notes
+# Notes
 
--   MongoDB Atlas is used for database storage.
--   AI emotion analysis is performed using an external LLM API.
--   The frontend UI is intentionally minimal as the focus of the
-    assignment is backend API design and AI integration.
+-   MongoDB Atlas is used for database storage
+-   AI emotion analysis is performed using an external LLM API
+-   Frontend UI is intentionally minimal because the focus of the
+    assignment is backend architecture and AI integration
