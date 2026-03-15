@@ -7,7 +7,7 @@ function App() {
 
   const analyze = async () => {
 
-    const res = await fetch("http://localhost:5000/api/journal/analyze", {
+    const res = await fetch("https://ai-journal-system-ofg5.onrender.com/api/journal/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
